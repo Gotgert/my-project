@@ -2,7 +2,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Сайт полностью загружен');
     
-    // Анимация для карточек
     const cards = document.querySelectorAll('.feature-card');
     cards.forEach((card, index) => {
         card.style.opacity = '0';
@@ -15,3 +14,12 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 100);
     });
 });
+
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Форма отправлена! (Это демо, данные никуда не отправляются)');
+        this.reset();
+    });
+}
