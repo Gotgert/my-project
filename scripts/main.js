@@ -23,3 +23,36 @@ if (contactForm) {
         this.reset();
     });
 }
+ const images = [
+            'https://via.placeholder.com/800x400?text=Image+1',
+            'https://via.placeholder.com/800x400?text=Image+2',
+            'https://via.placeholder.com/800x400?text=Image+3',
+            'https://via.placeholder.com/800x400?text=Image+4'
+        ];
+        
+        let currentIndex = 0;
+        const galleryImage = document.getElementById('gallery-image');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        
+        function showImage(index) {
+            galleryImage.src = images[index];
+            prevBtn.disabled = index === 0;
+            nextBtn.disabled = index === images.length - 1;
+        }
+        
+        prevBtn.addEventListener('click', () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+                showImage(currentIndex);
+            }
+        });
+        
+        nextBtn.addEventListener('click', () => {
+            if (currentIndex < images.length - 1) {
+                currentIndex++;
+                showImage(currentIndex);
+            }
+        });
+        
+            showImage(currentIndex);
