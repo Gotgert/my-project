@@ -24,10 +24,12 @@ if (contactForm) {
     });
 }
  const images = [
-            'https://via.placeholder.com/800x400?text=Image+1',
-            'https://via.placeholder.com/800x400?text=Image+2',
-            'https://via.placeholder.com/800x400?text=Image+3',
-            'https://via.placeholder.com/800x400?text=Image+4'
+	"../images/img.jpeg",
+	"../images/img2.jpeg",
+	"../images/img1.jpeg",
+	"../images/img3.jpeg",
+	"../images/img4.jpeg"
+
         ];
         
         let currentIndex = 0;
